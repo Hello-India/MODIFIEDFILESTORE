@@ -14,7 +14,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 
 """Add time in seconds for waiting before delete 
 1min = 60, 2min = 60*2 = 120, 5min = 60*5 = 300"""
-SECONDS = int(os.getenv("SECONDS", "3000"))
+SECONDS = int(os.getenv("SECONDS", "1800"))
 
 async def send_files(client: Client, user_id: int, ids: list[int], base64_string: str):
     messages = await get_messages(client, ids)
@@ -47,7 +47,7 @@ async def send_files(client: Client, user_id: int, ids: list[int], base64_string
     # Send the notification message about file deletion
     temp_msg = await client.send_message(
         user_id,
-        "<b>Fɪʟᴇꜱ ᴡɪʟʟ ʙᴇ Dᴇʟᴇᴛᴇᴅ ɪɴ 50 ᴍɪɴꜱ\nPʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ Sᴀᴠᴇᴅ Mᴇꜱꜱᴀɢᴇꜱ Bᴇꜰᴏʀᴇ Dᴏᴡɴʟᴏᴀᴅɪɴɢ..!</b>"
+        "<b>Fɪʟᴇꜱ ᴡɪʟʟ ʙᴇ Dᴇʟᴇᴛᴇᴅ ɪɴ 30 ᴍɪɴꜱ\nPʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ Sᴀᴠᴇᴅ Mᴇꜱꜱᴀɢᴇꜱ Bᴇꜰᴏʀᴇ Dᴏᴡɴʟᴏᴀᴅɪɴɢ..!</b>"
     )
 
     # Wait for the specified time
