@@ -47,7 +47,7 @@ async def send_files(client: Client, user_id: int, ids: list[int], base64_string
     # Send the notification message about file deletion
     temp_msg = await client.send_message(
         user_id,
-        "<b>Fɪʟᴇꜱ ᴡɪʟʟ ʙᴇ Dᴇʟᴇᴛᴇᴅ ɪɴ 30 ᴍɪɴꜱ\nPʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ Sᴀᴠᴇᴅ Mᴇꜱꜱᴀɢᴇꜱ Bᴇꜰᴏʀᴇ Dᴏᴡɴʟᴏᴀᴅɪɴɢ..!</b>"
+        "<b>⚠️ Fɪʟᴇꜱ ᴡɪʟʟ ʙᴇ Dᴇʟᴇᴛᴇᴅ ɪɴ 30 ᴍɪɴꜱ\n\n♻️ Pʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ Sᴀᴠᴇᴅ Mᴇꜱꜱᴀɢᴇꜱ Bᴇꜰᴏʀᴇ Dᴏᴡɴʟᴏᴀᴅɪɴɢ..!</b>"
     )
 
     # Wait for the specified time
@@ -72,7 +72,7 @@ async def send_files(client: Client, user_id: int, ids: list[int], base64_string
     retrieve_url = f"https://t.me/{client.username}?start={base64_string}"
     await client.send_message(
         user_id,
-        "<b>Fɪʟᴇꜱ ʜᴀꜱ ʙᴇᴇɴ Dᴇʟᴇᴛᴇᴅ.\nCʟɪᴄᴋ ᴛʜᴇ Bᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴛʜᴇ Fɪʟᴇꜱ Aɢᴀɪɴ.</b>",
+        "<b>🚫 Fɪʟᴇꜱ ʜᴀꜱ ʙᴇᴇɴ Dᴇʟᴇᴛᴇᴅ.\n\n✅ Cʟɪᴄᴋ ᴛʜᴇ Bᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴛʜᴇ Fɪʟᴇꜱ Aɢᴀɪɴ.</b>",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Retrieve Files", url=retrieve_url)]])
     )
 
